@@ -12,20 +12,14 @@
     </div>
 
 
-    <div class="card my-4">
-      <h1 class="card-header">Posts</h1>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-lg-12">
-            @foreach ($posts as $post)
+    <div class="master-card">
+      <span class="title">Posts</span>
+        @foreach ($posts as $post)
 
-              @include ('admin.post')
+        @include ('admin.post')
 
-              <hr>
+        <hr>
 
-            @endforeach
-          </div>
-        </div>
-      </div>
-  </div>
+        @endforeach
+    </div>
 @endsection
