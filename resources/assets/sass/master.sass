@@ -1,0 +1,93 @@
+body
+  /* Background pattern from Toptal Subtle Patterns */
+  background: linear-gradient(190deg, #1f7bc2, #1f7bc2, #1f7bc2, #075794)
+  height: 100vh
+  width: 94%
+
+// Basic Colors
+$black: #000000
+$blue: #0000FF
+$red: #FF0000
+$white: #FFFFFF
+
+// Main Styling
+$background-grey: #fff
+$canvas-grey: #333
+$canvas-border: #AAA
+$canvas-indent: #444
+$shadow-grey: #AAAAAA
+
+// Font Styling
+$font-face: 'Roboto Mono', monospace
+$code-cyan: #7bcbed
+$code-lime: #79e835
+$code-red: #e54040
+$code-yellow: #ffff00
+
+.main
+  margin-left: 27%
+  padding: 20px
+  margin-top: 20px
+
+.master-card
+  background: $white
+  box-shadow: 2px 0px 4px 1px #333
+  z-index: 1
+  font-family: 'Inconsolata', monospace
+  font-size: 1.5em
+  padding: 10px
+  margin-bottom: 10px
+
+  .title
+    font-size: 2.0em
+    display: block
+    background-color: #e8d27a
+    text-align: center
+
+  .calendar
+    border: 4px
+    width: 100%
+    height: 75vh
+
+  .flex-form-row
+    display: flex
+    justify-content: space-between
+    padding: 10px
+
+    input
+      border: 2px solid #fff
+      border-bottom-color: #00f
+      border-radius: 5px
+      background-color: #eee
+      font-family: 'Inconsolata', monospace
+      padding-left: 10px
+      padding-right: 10px
+      font-size: 1.0em
+
+    input:focus
+      border-bottom-color: #0f0
+      outline-width: 0px
+
+    button
+      font-family: 'Inconsolata', monospace
+      font-size: 1.0em
+      background: transparent
+      border: 2px solid #eee
+
+    button:hover
+      border: 2px solid #ccc
+
+    button:active
+      background: #ccc
+
+::-webkit-scrollbar-track
+  border-bottom-right-radius: 5px
+  background-color: #5a0020
+
+::-webkit-scrollbar
+  width: 8px
+  height: 8px
+
+::-webkit-scrollbar-thumb
+  background: linear-gradient(210deg, #FCBA04, #E9DF00, #E9DF00, #FCBA04)
+  border-radius: 10px
