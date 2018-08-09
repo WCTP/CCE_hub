@@ -20,7 +20,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet"> <!-- Font by Woowahan Brothers -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> <!-- Font by Raph Levien -->
 
   </head>
 

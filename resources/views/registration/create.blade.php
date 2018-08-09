@@ -17,9 +17,19 @@
         <label for="password">Password:</label>
         <input type="password" class="form-control" id="password" name="password" required>
       </div>
+
       <div class="flex-form-row">
         <label for="password_confirmation">Password Confirmation:</label>
         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+      </div>
+
+      <div class="flex-form-row">
+        <label for="privilege">Privilege:</label>
+        <select name="privilege" id="privilege">
+          <option value="player" selected>Player</option>
+          <option value="coach">Staff</option>
+          <option value="admin">Admin</option>
+        </select>
       </div>
 
       <div class="flex-form-row">

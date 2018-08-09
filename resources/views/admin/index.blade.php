@@ -2,28 +2,13 @@
 
 
 @section ('content')
-  <!-- Post Content Column -->
-  <div class="col-lg-8">
-
-    <div class="card my-4">
-      <h1 class="card-header">Options</h1>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="admin-option">
-              <li>
-                <a href="/posts/create">New Post</a>
-              </li>
-              <li>
-                <a href="#">HTML</a>
-              </li>
-              <li>
-                <a href="/logout">Sign Out</a>
-              </li>
-            </ul>
-          </div>
+  <div class="master-card">
+      <span class="title">Options</span>
+        <div class="flex-options-row">
+          <a href="/posts/create">New Post</a>
+          <a href="#">Users</a>
+          <a href="/logout">Sign Out</a>
         </div>
-      </div>
     </div>
 
 
@@ -37,13 +22,10 @@
               @include ('admin.post')
 
               <hr>
-              
+
             @endforeach
           </div>
         </div>
       </div>
-    </div>
-
   </div>
-
 @endsection

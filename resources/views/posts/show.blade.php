@@ -2,55 +2,40 @@
 
 
 @section ('content')
-  <!-- Post Content Column -->
-  <div class="col-lg-8">
-
+  <div class="master-card">
     <!-- Title -->
-    <h1 class="mt-4">{{ $post->title }}</h1>
+    <span class="title">{{ $post->title }}</span>
 
     <!-- Author -->
     <p class="lead">
       by
-      <a href="#">{{ $post->user->name }}</a>
+      <a href="#">{{ $post->user->name }}</a> on {{ $post->created_at->toFormattedDateString() }}
     </p>
-
-    <hr>
-
-    <!-- Date/Time -->
-    <p>{{ $post->created_at->toFormattedDateString() }}</p>
-
-    <hr>
-
-    <!-- Preview Image -->
-    <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
     <hr>
 
     <!-- Post Content -->
     {{ $post->body }}
+  </div>
 
-    <hr>
+  <div class="master-card">
 
     <!-- Comments Form -->
-    <div class="card my-4">
-      <h5 class="card-header">Leave a Comment:</h5>
-      <div class="card-body">
-        <form method="POST" action="/posts/{{ $post->id }}/comments">
-          {{ csrf_field() }}
-
-          <div class="form-group">
-            <textarea class="form-control" rows="3" id="body" name="body" required></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
-
-        @include ('layouts.errors')
-
+    <span class="title">Leave a Comment:</span>
+    <form method="POST" action="/posts/{{ $post->id }}/comments">
+      {{ csrf_field() }}
+      <div class="form-group">
+        <textarea class="form-control" rows="3" id="body" name="body" required></textarea>
       </div>
-    </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
 
+    @include ('layouts.errors')
+  </div>
+
+  <div class="master-card">
     <!-- Single Comment -->
     @foreach ($post->comments as $comment)
       <div class="media mb-4">

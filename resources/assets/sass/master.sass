@@ -44,14 +44,42 @@ $code-yellow: #ffff00
     background-color: #e8d27a
     text-align: center
 
+    a
+      text-decoration: none
+      color: black
+
   .calendar
     border: 4px
     width: 100%
     height: 75vh
 
-  .flex-form-row
+  .flex-options-row
     display: flex
     justify-content: space-between
+    padding: 10px
+
+    a
+      text-decoration: none
+      border: solid 1px white
+      color: black
+      padding: 2px
+      padding-left: 5px
+      padding-right: 5px
+      transition: 0.2s
+
+    a:hover
+      color: #ff3
+      background-color: #aaa
+      border-radius: 5px
+      border: solid 1px black
+      transition: 0.2s
+
+  textarea
+    width: 100%
+
+  .flex-form-row
+    display: flex
+    justify-content: space-around
     padding: 10px
 
     input
@@ -65,6 +93,20 @@ $code-yellow: #ffff00
       font-size: 1.0em
 
     input:focus
+      border-bottom-color: #0f0
+      outline-width: 0px
+
+    select
+      border: 2px solid #fff
+      border-bottom-color: #00f
+      border-radius: 5px
+      background-color: #eee
+      font-family: 'Inconsolata', monospace
+      padding-left: 10px
+      padding-right: 10px
+      font-size: 1.0em
+
+    select:focus
       border-bottom-color: #0f0
       outline-width: 0px
 
