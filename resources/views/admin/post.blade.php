@@ -7,9 +7,12 @@
 <hr>
 
 <!-- Single Post -->
-<p>
-  <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-  on {{ $post->created_at->toFormattedDateString() }}
-  <a href="/admin/edit/{{ $post->id }}">Edit</a> |
-  <a href="/admin/delete/{{ $post->id }}">Delete</a>
-</p>
+  <div class="flex-options-left">
+    <a href="/posts/{{ $post->id }}">{{ $post->title }} on {{ $post->created_at->toFormattedDateString() }}</a> |
+    <a href="/admin/edit/{{ $post->id }}">Edit</a> |
+    <form action="/admin/delete/{{ $post->id }}" method="POST">
+      {{ csrf_field() }}
+      {{ method_field('DELETE') }}
+      <button type="submit">Delete</button>
+    </form>
+  </div>

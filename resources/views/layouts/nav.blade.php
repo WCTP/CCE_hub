@@ -19,15 +19,9 @@
     <a href="#" class="main-link">Resources</a>
   </div>
   @if (Auth::check())
-    @if (Auth::user()->privilege != 'player')
-      <div class="link-container">
-        <a href="/admin" class="main-link">{{ Auth::user()->name }}</a>
-      </div>
-    @else
-      <div class="link-container">
-        <a href="/logout" class="main-link">Sign Out</a>
-      </div>
-    @endif
+    <div class="link-container">
+      <a href="/admin" class="main-link">{{ Auth::user()->name }}</a>
+    </div>
   @else
     <div class="link-container">
       <a href="/login" class="main-link">Sign In</a>

@@ -45,3 +45,10 @@ Route::get('/admin', 'AdminController@index');
 Route::delete('/admin/delete/{post}', 'PostsController@delete');
 Route::get('/admin/edit/{post}', 'PostsController@edit');
 Route::post('/admin/update/{post}', 'PostsController@update');
+
+/* Users Panel */
+Route::get('/users/index', 'UsersController@index');
+Route::delete('/users/delete/{user}', 'UsersController@delete');
+Route::get('/users/edit/{user}', 'UsersController@edit');
+Route::post('/users/update/{user}', 'UsersController@update');
+Route::post('/users/reset-password/{user}', 'UsersController@resetPassword');

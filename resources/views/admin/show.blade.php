@@ -25,7 +25,7 @@
       <textarea class="form-control" id="body" name="body" rows="15" required>{{ $post->body }}</textarea>
 
       <div class="flex-form-row">
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit">Update</button>
       </div>
 
       @include ('layouts.errors')
