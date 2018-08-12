@@ -4,10 +4,10 @@
     <img src="{{ asset('images/CCE Logo.png') }}" class="logo">
   </a>
   <div class="link-container">
-    <a href="#" class="main-link">Players</a>
+    <a href="/players/index" class="main-link">Players</a>
   </div>
   <div class="link-container">
-    <a href="#" class="main-link">Staff</a>
+    <a href="/staff/index" class="main-link">Staff</a>
   </div>
   <div class="link-container">
     <a href="/calendar" class="main-link">Calendar</a>

@@ -52,3 +52,16 @@ Route::delete('/users/delete/{user}', 'UsersController@delete');
 Route::get('/users/edit/{user}', 'UsersController@edit');
 Route::post('/users/update/{user}', 'UsersController@update');
 Route::post('/users/reset-password/{user}', 'UsersController@resetPassword');
+
+
+/* Players Panel */
+Route::get('/players/index', 'PlayerController@index');
+Route::get('/players/edit-list', 'PlayerController@editList');
+Route::get('/players/create', 'PlayerController@create');
+Route::post('/players', 'PlayerController@store');
+Route::get('/players/edit/{player}', 'PlayerController@edit');
+Route::post('/players/update/{player}', 'PlayerController@update');
+Route::delete('/players/delete/{player}', 'PlayerController@destroy');
+
+/* Staff Panel */
+Route::get('/staff', 'StaffController@index');
