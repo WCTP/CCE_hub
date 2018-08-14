@@ -64,4 +64,10 @@ Route::post('/players/update/{player}', 'PlayerController@update');
 Route::delete('/players/delete/{player}', 'PlayerController@destroy');
 
 /* Staff Panel */
-Route::get('/staff', 'StaffController@index');
+Route::get('/staff/index', 'StaffController@index');
+Route::get('/staff/edit-list', 'StaffController@editList');
+Route::get('/staff/create', 'StaffController@create');
+Route::post('/staff', 'StaffController@store');
+Route::get('/staff/edit/{staff}', 'StaffController@edit');
+Route::post('/staff/update/{staff}', 'StaffController@update');
+Route::delete('/staff/delete/{staff}', 'StaffController@destroy');
